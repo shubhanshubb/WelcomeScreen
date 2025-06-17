@@ -5,7 +5,6 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
-  SafeAreaView,
   GestureResponderEvent,
   StatusBar,
 } from 'react-native';
@@ -59,7 +58,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <StatusBar backgroundColor={'#EAF9FC'} 
       barStyle="dark-content" 
       networkActivityIndicatorVisible={true} 
@@ -116,16 +115,15 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
       <View style={styles.imageContainer}>
         <Image source={Images.doctor} style={styles.doctorImage} resizeMode="contain" />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#EAF9FC', // very light blue background
-    paddingHorizontal: 20,
-    // paddingTop: 12,
+    backgroundColor: '#EAF9FC',
+    paddingTop: 55,
   },
   header: {
     flexDirection: 'row',
@@ -250,7 +248,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
-    // paddingBottom: 12,
+    marginBottom: 20,
   },
   doctorImage: {
     width: 260,
