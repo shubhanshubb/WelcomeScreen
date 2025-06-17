@@ -7,6 +7,7 @@ import {
   Image,
   GestureResponderEvent,
   StatusBar,
+  Alert,
 } from 'react-native';
 import {
   ArrowLeft,
@@ -43,18 +44,44 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
     if (onUploadReports) {
       onUploadReports(e);
     } 
+    // Alert.alert(
+    //   'Upload Medical Reports',
+    //   'You can upload your medical reports for better assistance.',
+    //   [
+    //     { text: 'Upload', onPress: () => console.log('Upload pressed') },
+    //     { text: 'Cancel', style: 'cancel' },
+    //   ]
+    // );
   };
 
   const handleTalkToZivankh = (e: GestureResponderEvent) => {
     if (onTalkToZivankh) {
       onTalkToZivankh(e);
     } 
+    // Alert.alert(
+    //   'Talk to ZIVANKH',
+    //   'You can start a conversation with ZIVANKH for assistance.',
+    //   [
+    //     { text: 'Start Chat', onPress: () => console.log('Chat started') },
+    //     { text: 'Cancel', style: 'cancel' },
+    //   ]
+    // );
   };
 
   const handleLanguagePress = (e: GestureResponderEvent) => {
     if (onLanguagePress) {
       onLanguagePress(e);
     } 
+      // Alert.prompt(
+      //   'Select Language',
+      //   'Please select your preferred language:',
+      //   [
+      //     { text: 'English', onPress: () => console.log('English selected') },
+      //     { text: 'Hindi', onPress: () => console.log('Hindi selected') },
+      //     { text: 'Spanish', onPress: () => console.log('Spanish selected') },
+      //     { text: 'Cancel', style: 'cancel' },
+      //   ]
+      // );
   };
 
   return (
