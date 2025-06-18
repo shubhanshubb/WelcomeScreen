@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   uploadButtonText: {
-    fontSize: 16,
+    fontSize: 14,
     marginLeft: 10,
     color: '#222',
     fontWeight: '500',
